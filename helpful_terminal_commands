@@ -1,0 +1,60 @@
+//              VIRTUAL ENVIRONMENT             //
+
+// Start environment (on windows)
+.\venv\Scripts\activate
+
+// Start environment (on mac)
+source venv/bin/activate
+
+// Install requirements.txt
+sudo pip install -r requirements.txt
+
+
+//                    GIT                  //
+
+// Get most up-to-date version of master branch
+git pull
+
+// Stage all edits
+git add .
+
+// Commit with message
+git commit -m "this is the commit message"
+
+// Push changes onto master branch
+git push
+
+// See status of git
+git status
+
+// See all git logs
+git log
+
+//                    DJANGO                  //
+
+// Run server
+python manage.py runserver
+
+// Create super user
+python manage.py createsuperuser
+
+// Create staticfiles
+python manage.py collectstatic
+
+//                   DATABASE                 //
+
+// Add Database migration
+python manage.py makemigrations [app-name]
+
+// Update Database
+python manage.py migrate
+
+
+
+
+
+
+
+
+
+

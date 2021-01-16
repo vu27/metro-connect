@@ -1,0 +1,63 @@
+Steps to clone our project from Git (for windows)
+
+1. Install Git if not installed
+	- https://git-scm.com/download/win
+
+2. Clone our project
+	- Open command prompt / terminal
+	- cd into the directory where you want to save our project
+		mine is "cd C:\Users\tony\Desktop\"
+	- clone our project by typing "git clone https://github.com/vu27/metro-connect" in the terminal
+
+
+
+Steps to install python and virtual environment for Django (for windows):
+
+1. Install python3: check if Python is installed by opening command prompt and type "where python"
+	- You should see something like:
+		"C:\Users\tony\AppData\Local\Programs\Python\Python39\python.exe"
+
+	- If you see something with "WindowsApps" in the directory, THEN IT IS NOT INSTALLED:
+	  For example: "C:\Users\tony\AppData\Local\Microsoft\WindowsApps\python3.exe" (NOT INSTALLED)
+
+	- Install python3.9 if not installed
+		- https://www.python.org/downloads/
+		- MAKE SURE YOU CLICK THE CHECKBOX "Add Python 3.9 to PATH" during installation
+
+
+2. Install pipenv (this package handles creating the virtual environment)
+	- In command prompt / terminal, type "pip install pipenv"
+
+
+3. Create a virtual environment for the Django app to run in:
+	- cd into the directory where you've downloaded our project
+		mine is "cd C:\Users\tony\Desktop\metro-connect"
+	- create a virtual environment in this folder by typing "virtualenv venv"
+	- you should now see a folder named "venv" in the directory
+
+
+4. Install dependencies from requirements.txt (these are the dependencies for our project **it's similar to java's JAR files**)
+	- cd into our project directory if you're not already there 
+		For example: "cd C:\Users\tony\Desktop\metro-connect"
+		(make sure you're in the project's root directory and NOT "venv")
+	- Start the virtual environment by typing ".\venv\Scripts\activate"
+	 	(you should now see something like "(venv) C:\Users\tony\Desktop\metro-connect>" in the command prompt)
+		the (venv) means that you've successfully activated the virtual environment
+	- type "pip install -r requirements.txt" to install the depenedencies 
+
+
+5. Run the server
+	- Run the Django server by typing "python manage.py runserver"
+	- open a brownser and go to "http://127.0.0.1:8000/"
+	- if you see Hello World then everything works
+
+Tips:
+** I recommend using VS Code for the IDE for Django (it makes using Git really easy too)
+	- https://code.visualstudio.com/download
+
+** Another recommended IDE is PyCharm
+
+** You need to activate the virtual environment AND start the Django server each time you work on the project: 
+	- just open a terminal in VS Code and type ".\venv\Scripts\activate" to activate venv
+	- then "python manage.py runserver" to start the server
+
